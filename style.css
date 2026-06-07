@@ -5,6 +5,20 @@
     /* border: solid 1px; */
 }
 
+/* dark mode  */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode aktif */
+body.dark {
+    background-color: #232a33;
+    color: #f1f1f1;
+}
+/* dark mode  END*/
+
 /* STYLES UNTUK HEADER DAN NAVBAR */
 
 /* topbar */
