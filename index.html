@@ -24,7 +24,7 @@
     <!-- HEADER / NAVBAR  -->
     <header>
         <!-- TOPBAR UNTUK PROFIL, NOTIFIKASI, DARK MODE -->
-        <div class="topbar-icons">
+        <div id="topbar-icons">
                 <!-- NOTIFIKASI -->
                 <div class="notification">
                     <span class="material-symbols-outlined">notifications</span>
@@ -61,7 +61,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Harga & Budidaya</a></li>
+                    <li><a href="#container">Harga & Budidaya</a></li>
                     <li><a href="#">Grafik & Statistik</a></li>
                     <li><a href="#">Forum</a></li>
                 </ul>
@@ -71,8 +71,9 @@
         </nav>
         <!-- NAVBAR END -->
     </header>
-    <div class="background-shape">
     <!-- HEADER / NAVBAR END -->
+    <!-- HERO SECTION -->
+    <div class="background-shape">
         <div class="header-content">
             <div class="header-img">
                 <img src="Cuplikan layar 2026-06-06 001337 copy.png" alt="sawit galeri">
@@ -89,24 +90,225 @@
             </div>
         </div>
     </div>
-    <!-- HERO SECTION -->
     <!-- HERO SECTION END -->
     <!-- MAIN DASHBOARD CONTENT -->
+    <div class="card">
         <main>
+            <div id="container">
             <!-- PANEL HARGA TBS -->
+            <div class="card harga-TBS">
+                <h2>Harga TBS Hari Ini</h2>
+                <p id="hargaTBS">Rp 0000 / kg</p>
+                <button class="btn-detail">Lihat Detail Harga</button>   
+            </div>
             <!-- PANEL HARGA TBS END -->
             <!-- PANEL CUACA -->
+            <div class="card cuaca">
+                <h2>Cuaca Hari Ini</h2>
+                <div class="weather-info">
+                    <img id="weatherIcon" src="https://openweathermap.org/img/wn/04d.png" alt="icon cuaca">
+                    <div>
+                    <p id="temp">--°C</p>
+                    <p id="condition">---</p>
+                    </div>
+                </div>
+                <button class="btn-detail">Prakiraan Selengkapnya</button>
+            </div>
             <!-- PANEL CUACA END -->
             <!-- PANEL TIPS BUDIDAYA -->
+            <div class="card tips-budidaya">
+                <h2>Tips Budidaya Sawit</h2>
+                <ul id="tipsList"></ul>
+            </div>
             <!-- PANEL TIPS BUDIDAYA END -->
             <!-- CARD STATISTIK -->
-            <!-- CARD STATISTIK END -->       
+            <div class="card produksi">
+                <h2>Total Produksi</h2>
+                <canvas id="grafikProduksi"></canvas>
+            </div>
+            <!-- CARD STATISTIK END -->
+            </div>
+            <!-- PROJECT ALFIN -->
+            <section id="produksi-kalender">
+            
+                <div class="grafik-box">
+                
+                    <div class="grafik-header">
+                    
+                        <div>
+                            <h2>Grafik Produksi Kebun Anda</h2>
+                            <p>(Ton)</p>
+                        </div>
+                    
+                        <select id="periodeGrafik">
+                            <option value="6">6 Bulan Terakhir</option>
+                            <option value="12">12 Bulan Terakhir</option>
+                        </select>
+                    
+                    </div>
+                
+                    <canvas id="grafikSawit"></canvas>
+                
+            <div id="kalenderLengkap">
+            
+                <h3>Kalender Kegiatan</h3>
+            
+                <table class="kalenderTabel">
+                
+                    <thead>
+                        <tr>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>T</th>
+                            <th>W</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th>S</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                    
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="aktif">3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td class="aktif">8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td class="aktif">14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td class="aktif">19</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="aktif">27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                    </tbody>
+                
+                </table>
+            
+            </div>
+            
+                </div>
+            
+                <div class="kalender-box">
+                
+                    <h2>Jadwal Kegiatan</h2>
+                
+                    <div id="agendaList"></div>
+                
+                <div id="agendaTambahan"></div>
+                
+                <button
+                    class="btn-jadwal"
+                    id="toggleAgenda">
+                
+                    Lihat Semua Jadwal
+                
+                </button>
+            
+                </div>
+            
+            </section>
+            <!-- Project Raihan -->
+            <section class="bottom-section">
+            <div class="berita">
+                <h2>Berita & Pembaruan</h2>
+                <div class="berita-item">
+                    <img src="sawit_cpo_staa.jpg" alt="Kenaikan Harga TBS">
+                    <div>
+                        <h3>Harga Sawit Mengalami Kenaikan</h3>
+                        <p>Informasi terbaru harga TBS minggu ini.</p>
+                    </div>
+                    <button class="btn-berita">
+                        <a href="https://sawitindonesia.com/harga-tbs-sawit-swadaya-riau-naik-rp-1769-per-kilogram/?utm_source=chatgpt.com" target="_blank">Baca Selengkapnya</a>
+                        <span class="material-symbols-outlined">arrow_forward </span>
+                    </button>
+                </div>
+                <div class="berita-item">
+                    <img src="Teknik_sawit.jpg" alt="Tips Pemupukan Sawit">
+                    <div>
+                        <h3>Tips Pemupukan Sawit</h3>
+                        <p>Pemupukan yang tepat dapat meningkatkan produksi.</p>
+                    </div>
+                    <button class="btn-berita">
+                        <a href="https://www.rajatani.com/2026/03/teknik-pemupukan-kelapa-sawit.html" target="_blank">Baca Selengkapnya</a>
+                        <span class="material-symbols-outlined">arrow_forward </span>
+                    </button>
+                </div>
+                <div class="berita-item">
+                    <img src="Cuaca_sawit.webp" alt="Cuaca Ekstrem">
+                    <div>
+                        <h3>Waspada Cuaca Ekstrem Selama Musim Hujan</h3>
+                        <p>Petani disarankan memeriksa sistem drainase dan kondisi lahan</p>
+                    </div>
+                    <button class="btn-berita">
+                        <a href="https://www.sawitsetara.co/artikel/Berita/awal-2026-kebun-sawit-diuji-cuaca-ekstrem-hujan-mengganas-petani-diminta-siaga-penuh?" target="_blank">Baca Selengkapnya</a>
+                        <span class="material-symbols-outlined">arrow_forward </span>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri">
+                <h2>Galeri Kebun Sawit</h2>
+                <div class="galeri-grid">
+                    <img src="sawit1.jpg" alt="Sawit">
+                    <img src="sawit2.jpg" alt="Sawit">
+                    <img src="sawit3.jpg" alt="Sawit">  
+                    <img src="sawit4.jpg" alt="Sawit">
+                </div>
+            </div>
+            </div>
+        </section>   
         </main>
+    </div>
     <!-- MAIN DASHBOARD CONTENT END -->
     <!-- FOOTER -->
     <footer>
-        <!-- <p>&copy; 2024 PalmGrow. All rights reserved.</p> -->
+    <div class="footer-links">
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+        <a href="#">FAQ</a>
+        <a href="#">Kebijakan Privasi</a>
+    </div>
+    <p>© 2026 Dashboard Petani Sawit Swadaya</p>
     </footer>
     <!-- FOOTER END -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
