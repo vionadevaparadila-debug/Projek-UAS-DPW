@@ -1,3 +1,16 @@
+//dark mode
+const toggle = document.querySelector('.dark-mode-toggle');
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
+//dark mode END
+//responsiv navbar
+//responsiv navbar END
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("grafikSawit");
     if (!canvas) return;
