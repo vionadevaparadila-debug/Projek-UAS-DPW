@@ -7,10 +7,6 @@ toggle.addEventListener('click', () => {
 //responsiv navbar
 //responsiv navbar END
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("grafikSawit");
     if (!canvas) return;
